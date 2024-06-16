@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+body{
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(/ToDoList/img/wallpaper.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+.container{
+    width: 500px;
+    height: auto;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+}
+
+.todo-container .empty-image{
+    width: 60%;
+    margin-top: 100px;
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.todo-input{
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: rgba(144, 137, 249, 0.3);
+    border: 1px solid white;
+    border-radius: 25px;
+    color:white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.todo-input::placeholder{
+    color:rgba(255, 255, 255, 0.779);
+}
+
+.add-button{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.empty-image{
+    margin: 50px auto 0;
+    display: block;
+}
+
+.todo{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(131, 147, 227, 0.447);
+    color:white;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.2s ease;
+}
+
+.todo label{
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.todo span{
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: -3.5px;
+    border-radius: 100px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+input[type='checkbox']{
+    visibility: hidden;
+}
+
+input:checked + span{
+    text-decoration: line-through;
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before{
+    background: url(./img/check.svg) 50% 50% no-repeat #09bb21;
+}
+
+.todo:hover span::before{
+    border-color: rgb(169, 183, 249);
+}
+
+.todo .delete-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.todo-container{
+    height: 400px;
+    overflow: overlay;
+}
+
+.todo-container::-webkit-scrollbar-track{
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+}
+
+.todo-container::-webkit-scrollbar{
+    width: 0;
+}
+
+.todo-container:hover::-webkit-scrollbar{
+    width: 7px;
+}
+
+.todo-container:hover::-webkit-scrollbar-thumb{
+    background: #d5d5d5;
+    border-radius: 20px;
+}
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter{
+    color: white;
+    padding: 8px 15px;
+    border-radius: 100px;
+    border: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+.filter.active, .filter:hover{
+    background-color: rgba(128, 128, 161, 0.623);
+    cursor: pointer;
+}
+
+.delete-all{
+    display: flex;
+    color: white;
+    padding: 8px 15px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.delete-all:hover{
+    border-radius: 5px;
+    background-color: rgb(102, 127, 173);
+}
+
+
+
+
+
